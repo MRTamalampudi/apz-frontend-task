@@ -1,0 +1,29 @@
+@use "styles/colors";
+@import "styles/typography";
+@import "styles/borders";
+
+.mantine-Select-label{
+  @extend .subtitle;
+  color: colors.$black;
+}
+.mantine-Select-item{
+  @extend .body-text;
+  &:hover{
+    background-color: colors.$p-200;
+  }
+}
+.mantine-Select-input{
+  //@extend .border-solid-1;
+  background: colors.$g-100;
+}
+.mantine-Select-itemsWrapper{
+  border-radius: 0.25rem;
+}
+.mantine-Select-dropdown{
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.09);
+  @extend .border-solid-1;
+}
+
+.mantine-Select-root{
+  width: 100%;
+}

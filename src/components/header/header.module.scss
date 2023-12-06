@@ -1,0 +1,34 @@
+@import "styles/size";
+@import "styles/borders";
+@import "styles/cursor";
+@import "styles/typography";
+@import "styles/flex";
+
+.Header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  @extend .border-separator-bottom;
+  @extend .px-16;
+  @include height(3rem)
+}
+
+.right,.left{
+  display: flex;
+  column-gap: 0.5rem;
+  align-items: center;
+}
+
+.right .title{
+  @extend .heading-4;
+}
+
+.close{
+  @extend .pointer;
+}
+
+.darkMode{
+  @extend .flex-row;
+  @extend .column-gap-16;
+}

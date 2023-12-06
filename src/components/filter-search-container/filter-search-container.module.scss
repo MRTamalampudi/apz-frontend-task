@@ -1,0 +1,19 @@
+@import "styles/flex";
+@import "styles/size";
+
+.FilterSearchContainer {
+  justify-content: space-between;
+
+  @extend .flex-row;
+  @extend .px-16;
+  @include height(4rem)
+}
+
+.left{
+  @extend .flex-row;
+  @extend .column-gap-8;
+
+  > * {
+    flex-basis: 100%;
+  }
+}

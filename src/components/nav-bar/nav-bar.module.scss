@@ -1,0 +1,46 @@
+@use "styles/colors";
+@import "styles/borders";
+@import "styles/size";
+
+.NavBar {
+  display: flex;
+  flex-direction: column;
+  width: 3.5rem;
+  height: 100vh;
+  @extend .border-separator-right;
+}
+
+.header{
+  flex-basis: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.body{
+  display: flex;
+  flex-basis: 70%;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 15%;
+  @extend .mb-24;
+}
+
+.logo{
+  color: colors.$p-700;
+  font-size: 2rem;  
+}
+
+.customIcon{
+  svg{
+    fill: #199473;
+  }
+}
+
+.profile{
+  margin: 0 auto;
+}

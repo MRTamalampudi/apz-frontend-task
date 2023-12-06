@@ -1,0 +1,51 @@
+@import "styles/flex";
+@import "styles/size";
+@import "styles/borders";
+@import "styles/typography";
+
+.TaskBoard {
+  @extend .border-separator-top;
+  @extend .flex-row;
+  @extend .column-gap-16;
+  @include height(calc(100% - 4rem));
+  @include width(100%);
+  overflow-x: scroll;
+  @extend .p-16
+}
+
+.boards{
+  position: relative;
+
+  @include height(100%);
+  @include width(21rem);
+  @extend .flex-column;
+  @extend .row-gap-8;
+}
+
+
+
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  @include height(2rem);
+  @extend .py-8;
+  @extend .flex-row;
+  @extend .column-gap-8;
+
+  .title{
+    @extend .body-text;
+  }
+
+  .entries{
+    @extend .subtitle;
+  }
+}
+
+.body{
+  @extend .flex-column;
+  @extend .row-gap-8;
+  @include height(calc(100% - 2rem));
+  overflow-y: scroll;
+}

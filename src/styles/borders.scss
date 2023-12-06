@@ -1,0 +1,87 @@
+@use "colors";
+
+@mixin borderSolidWhite($size){
+  border: #{$size} solid #eff1f4;
+}
+
+@mixin borderSolidBlack($size){
+  border: #{$size} solid #4b4b4b;
+}
+
+@mixin borderRadius($radius){
+  border-radius: $radius;
+  overflow: hidden;
+}
+
+@mixin border($color,$size,$style){
+  border-width: $size;
+  border-color: $color;
+  border-style: $style;
+}
+
+[data-mantine-color-scheme='light'] .border-solid-1{
+  @include borderSolidWhite(1px);
+}
+
+[data-mantine-color-scheme='light'] .border-solid-2{
+  @include borderSolidWhite(2px)
+}
+
+[data-mantine-color-scheme='light'] .border-solid-3{
+  @include borderSolidWhite(3px)
+}
+
+[data-mantine-color-scheme='light'] .border-separator-bottom{
+  border-bottom: 1px solid #eff1f4;
+}
+
+[data-mantine-color-scheme='light'] .border-separator-right{
+  border-right: 1px solid #eff1f4;
+}
+
+[data-mantine-color-scheme='light'] .border-separator-top{
+  border-top: 1px solid #eff1f4;
+}
+[data-mantine-color-scheme='light'] .border-separator-left{
+  border-left: 1px solid #eff1f4;
+}
+
+[data-mantine-color-scheme='dark'] .border-solid-1{
+  @include borderSolidBlack(1px);
+}
+
+[data-mantine-color-scheme='dark'] .border-solid-2{
+  @include borderSolidBlack(2px)
+}
+
+[data-mantine-color-scheme='dark'] .border-solid-3{
+  @include borderSolidBlack(3px)
+}
+
+[data-mantine-color-scheme='dark'] .border-separator-bottom{
+  border-bottom: 1px solid #4b4b4b;
+}
+
+[data-mantine-color-scheme='dark'] .border-separator-right{
+  border-right: 1px solid #4b4b4b;
+}
+
+[data-mantine-color-scheme='dark'] .border-separator-top{
+  border-top: 1px solid #434343;
+}
+[data-mantine-color-scheme='dark'] .border-separator-left{
+  border-left: 1px solid #4b4b4b;
+}
+
+.border-rds-4{
+  @include borderRadius(0.25rem);
+}
+
+.border-rds-8{
+  @include borderRadius(0.5rem);
+}
+
+.border-rds-6{
+  @include borderRadius(0.375rem);
+}
+

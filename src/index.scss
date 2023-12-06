@@ -1,0 +1,15 @@
+@import "styles/index";
+@import "assets/inter/inter.css";
+@import "styles/mantine/index";
+
+body {
+  margin: 0;
+  font-family: Inter_;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

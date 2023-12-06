@@ -1,0 +1,5 @@
+@import "styles/typography";
+
+.mantine-Badge-label{
+  @extend .small-text-bold;
+}

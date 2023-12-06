@@ -1,0 +1,96 @@
+
+@mixin typography($font-size,$font-weight){
+  font-size: $font-size;
+  font-weight: $font-weight;
+  font-stretch: 100%;
+  letter-spacing: normal;
+  line-height: normal;
+  text-rendering: optimizeLegibility;
+  text-decoration: solid rgb(60, 65, 73);
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-feature-settings: normal;
+}
+
+@for $i from 10 through 20 {
+  .f-#{$i}{
+    @include typography(#{$i/16}rem,400)
+  }
+  .f-#{$i}-b{
+    @include typography(#{$i/16}rem,500)
+  }
+  .f-#{$i}-bb{
+    @include typography(#{$i/16}rem,600)
+  }
+  .f-#{$i}-bbb{
+    @include typography(#{$i/16}rem,700)
+  }
+}
+
+@for $i from 6 through 10{
+  .f-#{$i*4}{
+    @include typography(#{($i*4)/16}rem,400)
+  }
+  .f-#{$i*4}-b{
+    @include typography(#{($i*4)/16}rem,500)
+  }
+  .f-#{$i*4}-bb{
+    @include typography(#{($i*4)/16}rem,600)
+  }
+  .f-#{$i*4}-bbb{
+    @include typography(#{($i*4)/16}rem,700)
+  }
+}
+
+.small-text{
+  @extend .f-10;
+}
+
+.small-text-bold{
+  @extend .f-10-b;
+}
+
+.subtitle{
+  @extend .f-12-b;
+}
+
+.subtitle-bold{
+  @extend .f-12-bb;
+}
+
+.body-text{
+  @extend .f-13-b;
+}
+
+.body-text-bold{
+  @extend .f-13-bb;
+}
+
+.button-text{
+  @extend .f-13-b;
+}
+
+.heading-4{
+  @extend .f-15-b;
+}
+
+.heading-3{
+  @extend .f-18-b;
+}
+
+.heading-2{
+  @extend .f-20-bb;
+}
+
+.heading-1{
+  @extend .f-24-bb;
+}
+
+.text-align-right{
+  text-align: right;
+}
+
+.currency{
+  font-family: RobotoMono,monospace;
+  @extend .body-text-bold;
+  @extend .text-align-right;
+}

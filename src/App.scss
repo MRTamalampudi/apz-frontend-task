@@ -1,0 +1,28 @@
+@use "styles/colors";
+@import "styles/size";
+@import "styles/typography";
+@import "styles/radius";
+@import "styles/flex";
+@import "styles/icons";
+@import "styles/index";
+
+
+.App{
+  @extend .flex-row;
+  background-color: colors.$g-100;
+
+}
+
+[data-mantine-color-scheme='dark'] .App{
+  background-color: #383838;
+}
+
+.appContainer{
+  display: flex;
+  flex-direction: column;
+  width: calc(100% + -3.5rem);
+  height: 100vh;
+}
+.body{
+  height: calc(100% - 3rem);
+}
